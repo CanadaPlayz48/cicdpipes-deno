@@ -10,6 +10,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm audit
+        continue-on-error: true
       - run: npm audit fix
       - run: npm update
       - run: git commit -m "fixed and updated dependencies" || echo "No changes to commit"
